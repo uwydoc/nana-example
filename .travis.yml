@@ -40,7 +40,7 @@ install:
 
 script:
     - bii init -l simple
-    - bii find
+    - bii find --update
     - bii deps
     - bii configure
     - bii build
