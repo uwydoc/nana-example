@@ -46,8 +46,8 @@ script:
     - bii build
     
 before_deploy:
-    - rm install.sh
-    - rm *.log
+    - rm -f install.sh
+    - rm -f *.log
 
 deploy:
     provider: biicode
