@@ -45,9 +45,14 @@ script:
     - bii configure
     - bii build
     
+before_deploy:
+    - rm install.sh
+    - rm *.log
+
 deploy:
     provider: biicode
     user: "qiangwu"
     password: 
         secure: "MPrdX+Ax3b+amXC9dkeWq4eNmCO47cgOo7YEt1+bHNk1P263yWQJhfbigSrxsOacdn5lU1ZIQgMoyCJJ+1t7bC/uF+H9vFu6xtSujpulAlKNjdLguiZs6AzTPsNe8z5pz7E7On5pyXVAaUzX99cklHGvfyetAbudL85
 7RzOiH0Q="
+    skip_cleanup: true
